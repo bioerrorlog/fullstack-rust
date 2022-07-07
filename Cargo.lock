@@ -41,11 +41,11 @@ checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 name = "backend"
 version = "0.1.0"
 dependencies = [
- "common",
  "mobc",
  "mobc-postgres",
  "serde",
  "serde_json",
+ "shared",
  "thiserror",
  "tokio",
  "warp",
@@ -149,13 +149,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "common"
-version = "0.1.0"
-dependencies = [
- "serde",
-]
-
-[[package]]
 name = "console_error_panic_hook"
 version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -240,9 +233,9 @@ name = "frontend"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "common",
  "serde",
  "serde_json",
+ "shared",
  "wasm-bindgen",
  "yew",
  "yew-router",
@@ -1152,6 +1145,13 @@ dependencies = [
  "cfg-if",
  "cpufeatures",
  "digest 0.10.3",
+]
+
+[[package]]
+name = "shared"
+version = "0.1.0"
+dependencies = [
+ "serde",
 ]
 
 [[package]]
